@@ -1,0 +1,24 @@
+.btn {
+    background-color: rgb(8, 34, 179);
+    border: 2px solid black;
+    border-radius: 5%;
+    box-shadow: 7px 5px 5px black;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 10px;
+    line-height: 30px;
+    transition: 0.2s;
+    color: white;
+    position:fixed;
+    top: 300px;
+    right: 300px;
+  };
+  .btn:active {
+    box-shadow: 4px 2px 2px black;
+    transform: translate(2px, 2px);
+  };
+  .btn:hover {
+    transform: scale(1.1);
+    border: 2px solid black;
+  };

@@ -8,10 +8,21 @@ import "../../styles/yellowBright.css"
 import "../../styles/blackBottom.css"
 import "../../styles/green.css"
 import "../../styles/greenBright.css"
+import "../../styles/button.css"
 
 const TrafficLight = () => {
 
 	const [color, setColor] = useState("red");
+
+	const colorChange = () => {
+		if (color === "red") {
+		  setColor("yellow");
+		} else if (color === "yellow") {
+		  setColor("green");
+		} else if (color === "green") {
+		  setColor("red");
+		};
+	  };
 
 	return (
 		<div className="container mx-auto">
@@ -28,6 +39,7 @@ const TrafficLight = () => {
 			<p onClick={() => setColor("green")} 
 				className={color === "green" ? "greenBright" : "green"}
 			></p>
+			<button className="btn" onClick={colorChange}>Change Color</button>
 		</div>
 	);
 };
